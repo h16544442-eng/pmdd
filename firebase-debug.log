@@ -1,0 +1,557 @@
+[debug] [2026-05-18T19:31:11.120Z] ----------------------------------------------------------------------
+[debug] [2026-05-18T19:31:11.126Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-05-18T19:31:11.127Z] CLI Version:   15.14.0
+[debug] [2026-05-18T19:31:11.127Z] Platform:      win32
+[debug] [2026-05-18T19:31:11.127Z] Node Version:  v24.14.1
+[debug] [2026-05-18T19:31:11.128Z] Time:          Mon May 18 2026 12:31:11 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-05-18T19:31:11.128Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-18T19:31:11.131Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-05-18T19:31:14.939Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-18T19:31:14.940Z] > authorizing via signed-in user (h16544442@gmail.com)
+[debug] [2026-05-18T19:31:14.940Z] [iam] checking project pmdd-analysis-54d16 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-18T19:31:14.941Z] Checked if tokens are valid: false, expires at: 1778911764436
+[debug] [2026-05-18T19:31:14.941Z] Checked if tokens are valid: false, expires at: 1778911764436
+[debug] [2026-05-18T19:31:14.942Z] > refreshing access token with scopes: []
+[debug] [2026-05-18T19:31:14.944Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-18T19:31:14.944Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-18T19:31:16.301Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-18T19:31:16.302Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-18T19:31:16.320Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions [none]
+[debug] [2026-05-18T19:31:16.321Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions  x-goog-user-project=pmdd-analysis-54d16
+[debug] [2026-05-18T19:31:16.321Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-18T19:31:16.325Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-05-18T19:31:16.325Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-05-18T19:31:18.863Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions 200
+[debug] [2026-05-18T19:31:18.863Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-18T19:31:18.864Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:18.865Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:18.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 [none]
+[debug] [2026-05-18T19:31:22.575Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 200
+[debug] [2026-05-18T19:31:22.575Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 {"projectId":"pmdd-analysis-54d16","projectNumber":"362272181693","displayName":"PMDD analysis","name":"projects/pmdd-analysis-54d16","resources":{"hostingSite":"pmdd-analysis-54d16"},"state":"ACTIVE","etag":"1_4bce17d8-dce5-43b0-ab5e-6ab0c4e1a8d7"}
+[info] 
+[info] === Deploying to 'pmdd-analysis-54d16'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-18T19:31:22.586Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:22.586Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:22.587Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions [none]
+[debug] [2026-05-18T19:31:22.588Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-18T19:31:26.944Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions 200
+[debug] [2026-05-18T19:31:26.944Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"name":"projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[pmdd-analysis-54d16]: beginning deploy... 
+[info] i  hosting[pmdd-analysis-54d16]: found 5 files in frontend/dist 
+[debug] [2026-05-18T19:31:26.962Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-18T19:31:27.038Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:27.039Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:27.041Z] [hosting] hash cache [ZnJvbnRlbmRcZGlzdA] stored for 5 files
+[debug] [2026-05-18T19:31:27.042Z] [hosting][hash queue][FINAL] {"max":35,"min":1,"avg":10.2,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":43}
+[debug] [2026-05-18T19:31:27.042Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539:populateFiles [none]
+[debug] [2026-05-18T19:31:27.043Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539:populateFiles {"files":{"/icons.svg":"a71fc7c82918feffdb1e7e59f1b494531849b1025cedc75bc6c0dfa2a941d54d","/favicon.svg":"44fea64ea0b4986cf22dbc28741fe402f021baf13dbd2cc8ce6aa04b24300573","/index.html":"503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b","/assets/index-CC65U-VO.css":"9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b","/assets/index-ctCvrbsc.js":"742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e"}}
+[debug] [2026-05-18T19:31:28.150Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539:populateFiles 200
+[debug] [2026-05-18T19:31:28.151Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539:populateFiles {"uploadRequiredHashes":["503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b","9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b","742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files"}
+[debug] [2026-05-18T19:31:28.152Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.152Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.152Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.153Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.153Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.153Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:28.154Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b [none]
+[debug] [2026-05-18T19:31:28.154Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b [stream]
+[debug] [2026-05-18T19:31:28.158Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b [none]
+[debug] [2026-05-18T19:31:28.158Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b [stream]
+[debug] [2026-05-18T19:31:28.160Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e [none]
+[debug] [2026-05-18T19:31:28.161Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e [stream]
+[debug] [2026-05-18T19:31:28.163Z] [hosting][populate queue][FINAL] {"max":1116,"min":1116,"avg":1116,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1125}
+[debug] [2026-05-18T19:31:28.163Z] [hosting] uploads queued: 3
+[info] i  hosting: uploading new files [0/3] (0%) 
+[debug] [2026-05-18T19:31:29.637Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b 200
+[debug] [2026-05-18T19:31:29.637Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b [stream]
+[debug] [2026-05-18T19:31:29.649Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b 200
+[debug] [2026-05-18T19:31:29.649Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/503a8ece37b059c8ff7f8b848da88e1a5a39cb59189125009f2f6f5c650b3e8b [stream]
+[debug] [2026-05-18T19:31:30.235Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e 200
+[debug] [2026-05-18T19:31:30.236Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539/files/742fbba2511f8b5f3827e07a92037df29860bbdd579591b26d467025aed9d16e [stream]
+[debug] [2026-05-18T19:31:30.236Z] [hosting][upload queue][FINAL] {"max":2083,"min":1485,"avg":1689,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":2085}
+[info] i  hosting: upload complete 
+[info] +  hosting[pmdd-analysis-54d16]: file upload complete 
+[debug] [2026-05-18T19:31:30.237Z] [hosting] deploy completed after 3287ms
+[debug] [2026-05-18T19:31:30.237Z] [
+  {
+    "config": {
+      "public": "frontend/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/config/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/session/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/agent/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/download/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "pmdd-analysis-54d16"
+    },
+    "version": "projects/362272181693/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539"
+  }
+]
+[info] i  hosting[pmdd-analysis-54d16]: finalizing version... 
+[debug] [2026-05-18T19:31:30.240Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:30.240Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:30.241Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions [none]
+[debug] [2026-05-18T19:31:31.912Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions 403
+[debug] [2026-05-18T19:31:31.913Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions {"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","consumer":"projects/pmdd-analysis-54d16","service":"cloudfunctions.googleapis.com","containerInfo":"pmdd-analysis-54d16","serviceTitle":"Cloud Functions API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}}
+[debug] [2026-05-18T19:31:31.917Z] [functions] failed to list functions for pmdd-analysis-54d16
+[debug] [2026-05-18T19:31:31.917Z] [functions] Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-18T19:31:31.917Z] Deploying hosting site pmdd-analysis-54d16, did not have permissions to check for backends:  Failed to list functions for pmdd-analysis-54d16 {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to list functions for pmdd-analysis-54d16","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","consumer":"projects/pmdd-analysis-54d16","service":"cloudfunctions.googleapis.com","containerInfo":"pmdd-analysis-54d16","serviceTitle":"Cloud Functions API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403},"status":403}
+[debug] [2026-05-18T19:31:31.919Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:31.920Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:31:31.920Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539 updateMask=status%2Cconfig
+[debug] [2026-05-18T19:31:31.920Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/config/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/session/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/agent/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/download/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-05-18T19:31:32.822Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539 403
+[debug] [2026-05-18T19:31:32.822Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539 {"error":{"code":403,"message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/362272181693","activationUrl":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693","serviceTitle":"Cloud Run Admin API","service":"run.googleapis.com","containerInfo":"362272181693"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"}]}]}}
+[debug] [2026-05-18T19:31:33.834Z] Analytics tracking failed during error path: Timed out. {}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/9b592aa5ec9f1539?updateMask=status%2Cconfig had HTTP Error: 403, Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-18T19:31:33.836Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 403,
+      "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+      "status": "PERMISSION_DENIED",
+      "details": [
+        {
+          "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+          "reason": "SERVICE_DISABLED",
+          "domain": "googleapis.com",
+          "metadata": {
+            "consumer": "projects/362272181693",
+            "activationUrl": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693",
+            "serviceTitle": "Cloud Run Admin API",
+            "service": "run.googleapis.com",
+            "containerInfo": "362272181693"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+          "locale": "en-US",
+          "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.Help",
+          "links": [
+            {
+              "description": "Google developers console API activation",
+              "url": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "statusCode": 403
+  }
+}
+[debug] [2026-05-18T19:32:10.460Z] ----------------------------------------------------------------------
+[debug] [2026-05-18T19:32:10.472Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2026-05-18T19:32:10.474Z] CLI Version:   15.14.0
+[debug] [2026-05-18T19:32:10.474Z] Platform:      win32
+[debug] [2026-05-18T19:32:10.474Z] Node Version:  v24.14.1
+[debug] [2026-05-18T19:32:10.474Z] Time:          Mon May 18 2026 12:32:10 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-05-18T19:32:10.475Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-18T19:32:10.862Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-18T19:32:10.863Z] > authorizing via signed-in user (h16544442@gmail.com)
+[debug] [2026-05-18T19:32:10.868Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:32:10.869Z] Checked if tokens are valid: true, expires at: 1779136275302
+[debug] [2026-05-18T19:32:10.871Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-05-18T19:32:19.154Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-05-18T19:32:19.154Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌──────────────────────┬───────────────────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID                    │ Project Number │ Resource Location ID │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ ESL Toolkit          │ esl-toolkit-midterm-exam      │ 862363184256   │ [Not specified]      │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ Online tools         │ online-tools-6ad20            │ 333972114649   │ [Not specified]      │
+├──────────────────────┼───────────────────────────────┼────────────────┼──────────────────────┤
+│ PMDD analysis        │ pmdd-analysis-54d16 (current) │ 362272181693   │ [Not specified]      │
+└──────────────────────┴───────────────────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 3 project(s) total.
+[debug] [2026-05-18T19:32:20.251Z] Analytics tracking failed during success path: Timed out. {}
+[debug] [2026-05-19T00:58:36.369Z] ----------------------------------------------------------------------
+[debug] [2026-05-19T00:58:36.374Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --project pmdd-analysis-54d16
+[debug] [2026-05-19T00:58:36.374Z] CLI Version:   15.14.0
+[debug] [2026-05-19T00:58:36.374Z] Platform:      win32
+[debug] [2026-05-19T00:58:36.374Z] Node Version:  v24.14.1
+[debug] [2026-05-19T00:58:36.374Z] Time:          Mon May 18 2026 17:58:36 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-05-19T00:58:36.375Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-19T00:58:40.473Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-19T00:58:40.474Z] > authorizing via signed-in user (h16544442@gmail.com)
+[debug] [2026-05-19T00:58:40.475Z] [iam] checking project pmdd-analysis-54d16 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-19T00:58:40.477Z] Checked if tokens are valid: false, expires at: 1779136275302
+[debug] [2026-05-19T00:58:40.477Z] Checked if tokens are valid: false, expires at: 1779136275302
+[debug] [2026-05-19T00:58:40.477Z] > refreshing access token with scopes: []
+[debug] [2026-05-19T00:58:40.479Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-19T00:58:40.479Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-19T00:58:41.242Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-19T00:58:41.242Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-19T00:58:41.259Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions [none]
+[debug] [2026-05-19T00:58:41.260Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions  x-goog-user-project=pmdd-analysis-54d16
+[debug] [2026-05-19T00:58:41.260Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-19T00:58:43.055Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions 200
+[debug] [2026-05-19T00:58:43.055Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-19T00:58:43.056Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:43.056Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:43.057Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 [none]
+[debug] [2026-05-19T00:58:43.875Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 200
+[debug] [2026-05-19T00:58:43.875Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 {"projectId":"pmdd-analysis-54d16","projectNumber":"362272181693","displayName":"PMDD analysis","name":"projects/pmdd-analysis-54d16","resources":{"hostingSite":"pmdd-analysis-54d16"},"state":"ACTIVE","etag":"1_4bce17d8-dce5-43b0-ab5e-6ab0c4e1a8d7"}
+[info] 
+[info] === Deploying to 'pmdd-analysis-54d16'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-19T00:58:43.887Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:43.888Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:43.888Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions [none]
+[debug] [2026-05-19T00:58:43.888Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-19T00:58:46.907Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions 200
+[debug] [2026-05-19T00:58:46.907Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"name":"projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[pmdd-analysis-54d16]: beginning deploy... 
+[info] i  hosting[pmdd-analysis-54d16]: found 5 files in frontend/dist 
+[debug] [2026-05-19T00:58:46.959Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-19T00:58:46.983Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:46.983Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:46.986Z] [hosting] hash cache [ZnJvbnRlbmRcZGlzdA] stored for 5 files
+[debug] [2026-05-19T00:58:46.986Z] [hosting][hash queue][FINAL] {"max":21,"min":0,"avg":5.6,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":26}
+[debug] [2026-05-19T00:58:46.987Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff:populateFiles [none]
+[debug] [2026-05-19T00:58:46.987Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff:populateFiles {"files":{"/icons.svg":"a71fc7c82918feffdb1e7e59f1b494531849b1025cedc75bc6c0dfa2a941d54d","/favicon.svg":"44fea64ea0b4986cf22dbc28741fe402f021baf13dbd2cc8ce6aa04b24300573","/index.html":"5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61","/assets/index-CC65U-VO.css":"9bf886831783804b5809c93af998fd9b039bff87b7b529406c93623e984e289b","/assets/index-DuPiIF55.js":"8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5"}}
+[debug] [2026-05-19T00:58:48.159Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff:populateFiles 200
+[debug] [2026-05-19T00:58:48.160Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff:populateFiles {"uploadRequiredHashes":["5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61","8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files"}
+[debug] [2026-05-19T00:58:48.160Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:48.161Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:48.161Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:48.161Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:48.161Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61 [none]
+[debug] [2026-05-19T00:58:48.161Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61 [stream]
+[debug] [2026-05-19T00:58:48.166Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5 [none]
+[debug] [2026-05-19T00:58:48.166Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5 [stream]
+[debug] [2026-05-19T00:58:48.168Z] [hosting][populate queue][FINAL] {"max":1178,"min":1178,"avg":1178,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1185}
+[debug] [2026-05-19T00:58:48.169Z] [hosting] uploads queued: 2
+[info] i  hosting: uploading new files [0/2] (0%) 
+[debug] [2026-05-19T00:58:49.953Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5 200
+[debug] [2026-05-19T00:58:49.953Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/8f5c16ebea6c3a6abb935b93b557e640f5b4a750adf6ec04b43209a57f8dbac5 [stream]
+[debug] [2026-05-19T00:58:49.954Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61 200
+[debug] [2026-05-19T00:58:49.954Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff/files/5a81e508a50ee594b76c7fddd45a3cad36701fc9d62cd9b7c1e1998b15131b61 [stream]
+[debug] [2026-05-19T00:58:49.954Z] [hosting][upload queue][FINAL] {"max":1794,"min":1793,"avg":1793.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":1794}
+[info] i  hosting: upload complete 
+[info] +  hosting[pmdd-analysis-54d16]: file upload complete 
+[debug] [2026-05-19T00:58:49.955Z] [hosting] deploy completed after 3044ms
+[debug] [2026-05-19T00:58:49.955Z] [
+  {
+    "config": {
+      "public": "frontend/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/config/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/session/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/agent/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/download/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "pmdd-analysis-54d16"
+    },
+    "version": "projects/362272181693/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff"
+  }
+]
+[info] i  hosting[pmdd-analysis-54d16]: finalizing version... 
+[debug] [2026-05-19T00:58:49.956Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:49.956Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:49.956Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions [none]
+[debug] [2026-05-19T00:58:50.907Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions 403
+[debug] [2026-05-19T00:58:50.907Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions {"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"cloudfunctions.googleapis.com","serviceTitle":"Cloud Functions API","activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","consumer":"projects/pmdd-analysis-54d16","containerInfo":"pmdd-analysis-54d16"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}}
+[debug] [2026-05-19T00:58:50.908Z] [functions] failed to list functions for pmdd-analysis-54d16
+[debug] [2026-05-19T00:58:50.909Z] [functions] Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-19T00:58:50.909Z] Deploying hosting site pmdd-analysis-54d16, did not have permissions to check for backends:  Failed to list functions for pmdd-analysis-54d16 {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to list functions for pmdd-analysis-54d16","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"cloudfunctions.googleapis.com","serviceTitle":"Cloud Functions API","activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","consumer":"projects/pmdd-analysis-54d16","containerInfo":"pmdd-analysis-54d16"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403},"status":403}
+[debug] [2026-05-19T00:58:50.944Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:50.944Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T00:58:50.944Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff updateMask=status%2Cconfig
+[debug] [2026-05-19T00:58:50.945Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff {"status":"FINALIZED","config":{"rewrites":[{"glob":"/config/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/session/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/agent/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/download/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-05-19T00:58:51.776Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff 403
+[debug] [2026-05-19T00:58:51.776Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff {"error":{"code":403,"message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"containerInfo":"362272181693","serviceTitle":"Cloud Run Admin API","activationUrl":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693","service":"run.googleapis.com","consumer":"projects/362272181693"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"}]}]}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/cde2f5a55aaed1ff?updateMask=status%2Cconfig had HTTP Error: 403, Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-19T00:58:52.265Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 403,
+      "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+      "status": "PERMISSION_DENIED",
+      "details": [
+        {
+          "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+          "reason": "SERVICE_DISABLED",
+          "domain": "googleapis.com",
+          "metadata": {
+            "containerInfo": "362272181693",
+            "serviceTitle": "Cloud Run Admin API",
+            "activationUrl": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693",
+            "service": "run.googleapis.com",
+            "consumer": "projects/362272181693"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+          "locale": "en-US",
+          "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.Help",
+          "links": [
+            {
+              "description": "Google developers console API activation",
+              "url": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "statusCode": 403
+  }
+}
+[debug] [2026-05-19T01:08:52.603Z] ----------------------------------------------------------------------
+[debug] [2026-05-19T01:08:52.619Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --project pmdd-analysis-54d16
+[debug] [2026-05-19T01:08:52.620Z] CLI Version:   15.14.0
+[debug] [2026-05-19T01:08:52.620Z] Platform:      win32
+[debug] [2026-05-19T01:08:52.620Z] Node Version:  v24.14.1
+[debug] [2026-05-19T01:08:52.620Z] Time:          Mon May 18 2026 18:08:52 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-05-19T01:08:52.620Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-19T01:08:54.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-19T01:08:54.874Z] > authorizing via signed-in user (h16544442@gmail.com)
+[debug] [2026-05-19T01:08:54.874Z] [iam] checking project pmdd-analysis-54d16 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-19T01:08:54.876Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:54.876Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:54.877Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions [none]
+[debug] [2026-05-19T01:08:54.878Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions  x-goog-user-project=pmdd-analysis-54d16
+[debug] [2026-05-19T01:08:54.878Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-19T01:08:56.803Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions 200
+[debug] [2026-05-19T01:08:56.804Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pmdd-analysis-54d16:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-19T01:08:56.804Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:56.805Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:56.805Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 [none]
+[debug] [2026-05-19T01:08:57.600Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 200
+[debug] [2026-05-19T01:08:57.600Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pmdd-analysis-54d16 {"projectId":"pmdd-analysis-54d16","projectNumber":"362272181693","displayName":"PMDD analysis","name":"projects/pmdd-analysis-54d16","resources":{"hostingSite":"pmdd-analysis-54d16"},"state":"ACTIVE","etag":"1_4bce17d8-dce5-43b0-ab5e-6ab0c4e1a8d7"}
+[info] 
+[info] === Deploying to 'pmdd-analysis-54d16'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-19T01:08:57.617Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:57.617Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:08:57.617Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions [none]
+[debug] [2026-05-19T01:08:57.618Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-19T01:09:00.304Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions 200
+[debug] [2026-05-19T01:09:00.304Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions {"name":"projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[pmdd-analysis-54d16]: beginning deploy... 
+[info] i  hosting[pmdd-analysis-54d16]: found 5 files in frontend/dist 
+[debug] [2026-05-19T01:09:00.363Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-19T01:09:00.394Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:00.395Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:00.397Z] [hosting] hash cache [ZnJvbnRlbmRcZGlzdA] stored for 5 files
+[debug] [2026-05-19T01:09:00.397Z] [hosting][hash queue][FINAL] {"max":26,"min":2,"avg":9.6,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":32}
+[debug] [2026-05-19T01:09:00.398Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3:populateFiles [none]
+[debug] [2026-05-19T01:09:00.398Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3:populateFiles {"files":{"/icons.svg":"a71fc7c82918feffdb1e7e59f1b494531849b1025cedc75bc6c0dfa2a941d54d","/favicon.svg":"44fea64ea0b4986cf22dbc28741fe402f021baf13dbd2cc8ce6aa04b24300573","/index.html":"f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a","/assets/index-HcvjgFXE.css":"a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788","/assets/index-xEFv71c9.js":"41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf"}}
+[debug] [2026-05-19T01:09:01.202Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3:populateFiles 200
+[debug] [2026-05-19T01:09:01.202Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3:populateFiles {"uploadRequiredHashes":["41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf","f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a","a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files"}
+[debug] [2026-05-19T01:09:01.203Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.203Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.204Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.204Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.204Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.204Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:01.205Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf [none]
+[debug] [2026-05-19T01:09:01.205Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf [stream]
+[debug] [2026-05-19T01:09:01.209Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a [none]
+[debug] [2026-05-19T01:09:01.210Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a [stream]
+[debug] [2026-05-19T01:09:01.212Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788 [none]
+[debug] [2026-05-19T01:09:01.213Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788 [stream]
+[debug] [2026-05-19T01:09:01.215Z] [hosting][populate queue][FINAL] {"max":810,"min":810,"avg":810,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":821}
+[debug] [2026-05-19T01:09:01.216Z] [hosting] uploads queued: 3
+[info] i  hosting: uploading new files [0/3] (0%) 
+[debug] [2026-05-19T01:09:02.749Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a 200
+[debug] [2026-05-19T01:09:02.749Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/f4da4284ea5c2eadbad48a71f068acb50d46adfea50b2b5dffea73ec7e3ae45a [stream]
+[debug] [2026-05-19T01:09:03.007Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788 200
+[debug] [2026-05-19T01:09:03.007Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/a434b98145e68c699bd91eee134d2c460578529dc3e840d4288ec3b02444d788 [stream]
+[debug] [2026-05-19T01:09:03.015Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf 200
+[debug] [2026-05-19T01:09:03.015Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3/files/41add06ed971f86aa1c56649700d948a02914c2142c4eb7369a27d1d709a62bf [stream]
+[debug] [2026-05-19T01:09:03.016Z] [hosting][upload queue][FINAL] {"max":1812,"min":1546,"avg":1720.3333333333333,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":1813}
+[info] i  hosting: upload complete 
+[info] +  hosting[pmdd-analysis-54d16]: file upload complete 
+[debug] [2026-05-19T01:09:03.016Z] [hosting] deploy completed after 2707ms
+[debug] [2026-05-19T01:09:03.017Z] [
+  {
+    "config": {
+      "public": "frontend/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/config/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/session/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/agent/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "/download/**",
+          "run": {
+            "serviceId": "pmdd-api",
+            "region": "us-central1"
+          }
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "pmdd-analysis-54d16"
+    },
+    "version": "projects/362272181693/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3"
+  }
+]
+[info] i  hosting[pmdd-analysis-54d16]: finalizing version... 
+[debug] [2026-05-19T01:09:03.018Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:03.018Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:03.019Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions [none]
+[debug] [2026-05-19T01:09:03.796Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions 403
+[debug] [2026-05-19T01:09:03.797Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions {"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"cloudfunctions.googleapis.com","consumer":"projects/pmdd-analysis-54d16","activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","containerInfo":"pmdd-analysis-54d16","serviceTitle":"Cloud Functions API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}}
+[debug] [2026-05-19T01:09:03.798Z] [functions] failed to list functions for pmdd-analysis-54d16
+[debug] [2026-05-19T01:09:03.799Z] [functions] Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-19T01:09:03.799Z] Deploying hosting site pmdd-analysis-54d16, did not have permissions to check for backends:  Failed to list functions for pmdd-analysis-54d16 {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to list functions for pmdd-analysis-54d16","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"cloudfunctions.googleapis.com","consumer":"projects/pmdd-analysis-54d16","activationUrl":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16","containerInfo":"pmdd-analysis-54d16","serviceTitle":"Cloud Functions API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://cloudfunctions.googleapis.com/v1/projects/pmdd-analysis-54d16/locations/-/functions had HTTP Error: 403, Cloud Functions API has not been used in project pmdd-analysis-54d16 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudfunctions.googleapis.com/overview?project=pmdd-analysis-54d16 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403},"status":403}
+[debug] [2026-05-19T01:09:03.806Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:03.806Z] Checked if tokens are valid: true, expires at: 1779155920243
+[debug] [2026-05-19T01:09:03.808Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3 updateMask=status%2Cconfig
+[debug] [2026-05-19T01:09:03.808Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/config/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/session/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/agent/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"/download/**","run":{"serviceId":"pmdd-api","region":"us-central1"}},{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-05-19T01:09:04.342Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3 403
+[debug] [2026-05-19T01:09:04.343Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3 {"error":{"code":403,"message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/362272181693","activationUrl":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693","serviceTitle":"Cloud Run Admin API","containerInfo":"362272181693","service":"run.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"}]}]}}
+[error] 
+[error] Error: Request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/pmdd-analysis-54d16/versions/b6d8c572b37af5a3?updateMask=status%2Cconfig had HTTP Error: 403, Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+[debug] [2026-05-19T01:09:04.765Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 403,
+      "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.",
+      "status": "PERMISSION_DENIED",
+      "details": [
+        {
+          "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+          "reason": "SERVICE_DISABLED",
+          "domain": "googleapis.com",
+          "metadata": {
+            "consumer": "projects/362272181693",
+            "activationUrl": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693",
+            "serviceTitle": "Cloud Run Admin API",
+            "containerInfo": "362272181693",
+            "service": "run.googleapis.com"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+          "locale": "en-US",
+          "message": "Cloud Run Admin API has not been used in project 362272181693 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+        },
+        {
+          "@type": "type.googleapis.com/google.rpc.Help",
+          "links": [
+            {
+              "description": "Google developers console API activation",
+              "url": "https://console.developers.google.com/apis/api/run.googleapis.com/overview?project=362272181693"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "response": {
+    "statusCode": 403
+  }
+}

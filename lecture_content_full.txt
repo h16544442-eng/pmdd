@@ -1,0 +1,432 @@
+PARA: COMPUTATIONAL LINGUISTICS
+PARA: Agentic AI for Linguistic Analysis
+PARA: A Complete Lecture & Project Guide
+PARA: Building on Previous Work: AI vs Human Writing Analysis (4-Agent System)
+PARA: Table of Contents
+PARA: 1.  What is Agentic AI?	3
+PARA: 2.  How AI Agents Work — Core Architecture	4
+PARA: 3.  From Your 4-Agent System to the Next Level	5
+PARA: 4.  The New Project: Pragmatic Meaning Drift Detector (PMDD)	6
+PARA: 5.  Linguistic Theoretical Framework	7
+PARA: 6.  Proposed Agentic Workflow	8
+PARA: 7.  The Five Agents — Detailed Design	9
+PARA: 8.  Items and Tools Required	14
+PARA: 9.  Implementation Guide on Antigravity IDE	15
+PARA: 10.  Sample Corpus and Expected Outputs	18
+PARA: 11.  Evaluation Criteria (Linguistics-Based)	19
+PARA: 12.  Student Assignment Checklist	20
+PARA: 1. What is Agentic AI?
+PARA: Agentic AI refers to artificial intelligence systems that can act autonomously toward a goal — planning, executing actions, using tools, and adapting based on feedback — without requiring step-by-step human instructions. Unlike a standard chatbot that responds to a single prompt and stops, an AI Agent can reason across multiple steps, call external tools, remember intermediate results, and coordinate with other agents to solve complex tasks.
+PARA: 1.1  The Four Pillars of an AI Agent
+PARA: 1.2  Why Agentic AI Matters for Linguistics
+PARA: Traditional NLP pipelines are rigid: each step is hardcoded. Agentic systems are adaptive and modular: each agent can re-evaluate its strategy, handle exceptions, and pass enriched data downstream — exactly what large-scale linguistic corpus analysis demands.
+PARA: Handles diverse file formats: .txt, .csv, .json, PDF corpora
+PARA: Applies multiple linguistic frameworks simultaneously across layers
+PARA: Produces structured, evidence-based linguistic reports automatically
+PARA: Scales from a single essay to a million-token corpus
+PARA: 2. How AI Agents Work — Core Architecture
+PARA: Every AI agent follows the Observe -> Think -> Act -> Reflect cycle. Understanding this loop is essential before designing any multi-agent linguistics system.
+PARA: 2.1  Types of Agent Memory
+PARA: 2.2  Agent Communication Patterns
+PARA: Sequential (Pipeline): Agent 1 -> Agent 2 -> Agent 3 -> Final Output. Each agent hands its result to the next. Simple and predictable.
+PARA: Hierarchical (Orchestrator + Sub-agents): A master agent delegates tasks to specialist sub-agents and synthesizes their results.
+PARA: Parallel (Swarm): Multiple agents work simultaneously on different parts of the data, and their outputs are merged.
+PARA: In our PMDD project, we use a hybrid pattern: sequential pipeline at the macro level (agents 1 to 5) with an orchestrator (Agent 5) that can request re-analysis from any earlier agent if evidence is insufficient.
+PARA: 3. From Your 4-Agent System to the Next Level
+PARA: Your previous project built a 4-layer system analyzing AI-generated vs human-written text using distinct linguistic approaches per agent. Here is how the new project compares and extends that work:
+PARA: 4. The New Project: Pragmatic Meaning Drift Detector (PMDD)
+PARA: 4.1  What Does PMDD Analyze?
+PARA: PMDD investigates how the pragmatic meaning, connotative associations, and discourse functions of key lexical items shift across different time periods, genres, or social groups within a text corpus. This is a core question in Historical Pragmatics, Sociolinguistics, and Corpus Linguistics.
+PARA: Examples of research questions PMDD can answer from a large corpus:
+PARA: How has the word "community" shifted in its pragmatic use across political speeches from 2000 to 2024?
+PARA: Do academic research papers in 2010 use hedging language differently from those in 2024?
+PARA: How do informal social media texts differ from formal news texts in their use of causal connectives?
+PARA: Is there evidence of register borrowing — formal vocabulary appearing in informal contexts?
+PARA: How do politeness strategies evolve across different sections of a legal document corpus?
+PARA: 4.2  Why This Topic is Novel and Linguistically Important
+PARA: 5. Linguistic Theoretical Framework
+PARA: Each agent in PMDD is grounded in an established linguistic theory. Students must understand these frameworks before writing any code.
+PARA: 6. Proposed Agentic Workflow
+PARA: 6.1  Data Flow Diagram
+PARA: 7. The Five Agents — Detailed Design
+PARA: Each agent card below shows its linguistic approach, key tasks, and data input/output format.
+PARA: 8. Items and Tools Required
+PARA: Everything needed is either free or already available to you. The only paid component is your existing OpenAI API key.
+PARA: 9. Implementation Guide on Antigravity IDE
+PARA: 9.1  Project Structure
+PARA: 9.2  Agent 1: Corpus Preprocessor
+PARA: 9.3  Agent 2: Pragmatic Analyzer — System Prompt Design
+PARA: The system prompt is the core linguistic instrument for Agent 2. Careful prompt engineering is required:
+PARA: 9.4  Agent 5: Orchestrator Logic
+PARA: 9.5  App Interface with Gradio
+PARA: 10. Sample Corpus and Expected Outputs
+PARA: 10.1  Suggested Starter Corpora (All Free)
+PARA: 10.2  Sample Agent 5 Report Fragment
+PARA: 11. Evaluation Criteria (Linguistics-Based)
+PARA: 12. Student Assignment Checklist
+PARA: Phase 1: Setup and Understanding
+PARA: Read all six theoretical framework entries in Section 5 of this document
+PARA: Set up your Antigravity IDE project with the folder structure from Section 9.1
+PARA: Install all required packages: openai, spacy, pandas, gradio
+PARA: Test your OpenAI API key with a simple Python script before proceeding
+PARA: Phase 2: Agent Development
+PARA: Implement Agent 1 (Preprocessor) and test it with a sample .txt file
+PARA: Design the system prompt for Agent 2 using Speech Act and Gricean frameworks
+PARA: Implement Agent 2 and verify it returns valid JSON with required fields
+PARA: Implement Agent 3 and verify semantic field clustering makes linguistic sense
+PARA: Implement Agent 4 and produce frequency tables, check against a manual count
+PARA: Implement Agent 5 and test the feedback loop with a small corpus first
+PARA: Phase 3: Integration and Application
+PARA: Connect all five agents in app.py following the workflow in Section 6
+PARA: Build the Gradio UI with file upload and keyword input fields
+PARA: Test with a real corpus of at least 500 sentences
+PARA: Verify final report contains specific corpus segment citations as evidence
+PARA: Prepare a 5-minute presentation: show the app running on a corpus of your choice
+PARA: Core Principle: Linguistics First, Technology Second
+PARA: The agents are tools. The linguistic evidence they produce must be interpretable, defensible, and grounded in the theoretical frameworks in Section 5. A technically perfect system that produces linguistically invalid findings has failed.
+TABLE START
+Platform: Antigravity IDE (Google)
+API: OpenAI GPT-4o   |   Tools: Python + Multi-Agent Framework
+New Project: Pragmatic Meaning Drift Detector (PMDD)
+TABLE END
+TABLE START
+Key Distinction: Passive AI vs Agentic AI
+Passive AI (e.g., plain GPT-4 chat): You ask a question and it answers. The process ends there.
+Agentic AI: You give a high-level goal. It plans sub-tasks, executes tools, evaluates results, and iterates.
+In linguistics terms: Passive AI = single utterance response. Agentic AI = full discourse with tool-assisted reasoning.
+TABLE END
+TABLE START
+Pillar | Description
+Perception | The agent receives input — text, files, structured data, API results, or output from other agents.
+Reasoning | Using a Large Language Model (LLM), the agent interprets the input, plans actions, and decides what tool to call next.
+Action | The agent executes: runs Python code, calls an API, reads a file, queries a database, or delegates to a sub-agent.
+Memory | The agent stores context within a session (short-term) or retrieves results from persistent storage (long-term).
+TABLE END
+TABLE START
+The Agent Loop (Observe -> Think -> Act -> Reflect)
+OBSERVE:   The agent receives data — raw text, preprocessed output, or another agent's result.
+THINK:     The LLM reasons about what to do next (often using chain-of-thought prompting).
+ACT:       The agent executes: calls a tool, writes code, calls the OpenAI API, or delegates.
+REFLECT:   The agent evaluates its own output and decides to continue or stop.
+This loop repeats until the goal is achieved or a stopping condition is met.
+TABLE END
+TABLE START
+Memory Type | Description
+In-Context Memory | Information stored within the current LLM context window. Temporary — lost when the session ends.
+External Memory | Information stored in files, databases, or vector stores. Persists across sessions.
+Episodic Memory | Records of past agent actions and results. Enables agents to learn from previous runs.
+Semantic Memory | Embedded representations of knowledge (e.g., embeddings of a corpus for similarity search).
+TABLE END
+TABLE START
+Previous 4-Agent System | New 5-Agent PMDD System
+Previous Project (AI vs Human Writing) | New Project (PMDD — Meaning Drift)
+4 agents, each using 1 linguistic layer | 5 agents, each using 1-2 specialized linguistic approaches
+Binary classification goal (AI or Human) | Evolutionary / comparative analysis goal (How meaning shifts)
+Fixed text samples as input | Large corpus or uploaded files of any size
+Output: classification + evidence | Output: full linguistic drift report with quantitative and qualitative evidence
+Layers: syntax, semantics, pragmatics, style | Layers: pragmatics, semantic fields, corpus frequency, discourse, register
+Single-pass analysis | Multi-pass with orchestrator feedback loop
+TABLE END
+TABLE START
+PROJECT NAME
+Pragmatic Meaning Drift Detector (PMDD)
+An Agentic AI Application for Large-Corpus Linguistic Analysis
+TABLE END
+TABLE START
+Feature | Why it Matters
+Grounded in Real Theory | Based on Grice's Maxims, Austin's Speech Acts, Labov's Sociolinguistic Variation, and Corpus Linguistics (Sinclair, Stubbs)
+Corpus-Scale Analysis | Works on any uploaded text file or large corpus — not just sample sentences
+Application Form | Deployable as an interactive app where users upload a corpus and receive a structured linguistic report
+Builds on Previous Work | Extends your 4-agent framework with a 5th orchestrator and temporal/register dimensions
+Publishable Findings | Results constitute genuine linguistic research evidence suitable for academic discussion
+TABLE END
+TABLE START
+Theory | Application in PMDD
+Pragmatics — Grice (1975) | Cooperative Principle: Maxims of Quantity, Quality, Relation, Manner. Implicature patterns indicate how meaning shifts beyond literal semantics.
+Speech Act Theory — Austin/Searle | Illocutionary force classification: assertives, directives, commissives, expressives, declarations. Agent 2 classifies speech acts per segment.
+Semantic Field Theory — Lyons (1977) | Lexical items organized into semantic fields. Drift is detected when a word moves between fields or acquires new field membership over time.
+Register Analysis — Halliday (1978) | Tenor, Field, Mode. Agent 3 identifies register markers and detects register borrowing or shift across corpus sections.
+Corpus Linguistics — Sinclair (1991) | Concordance, collocation, frequency, keyness. Agent 4 performs quantitative corpus analysis to detect statistically significant lexical patterns.
+Critical Discourse Analysis — Fairclough | Power, ideology, and social context encoded in text. Agent 5 synthesizes all layers into a critical evidence report.
+TABLE END
+TABLE START
+PMDD Macro Workflow
+STEP 1  ->  User uploads corpus file (.txt / .csv / .json / PDF) via app interface
+STEP 2  ->  Agent 1 (Corpus Preprocessor) cleans, segments, and tokenizes the text
+STEP 3  ->  Agent 2 (Pragmatic Analyzer) extracts speech acts, implicatures, and maxim violations
+STEP 4  ->  Agent 3 (Semantic Field & Register Detector) maps vocabulary drift and register shifts
+STEP 5  ->  Agent 4 (Corpus Statistician) computes frequency, collocation, and keyness scores
+STEP 6  ->  Agent 5 (Orchestrator-Reporter) synthesizes all outputs into a structured linguistic report
+STEP 7  ->  App displays: Summary Dashboard + Detailed Evidence Report + Downloadable JSON
+OPTIONAL -> Agent 5 can request re-analysis from any earlier agent with modified parameters
+TABLE END
+TABLE START
+[ USER UPLOADS CORPUS ]
+|
+AGENT 1: Corpus Preprocessor  ->  Clean Segments + Metadata
+|
+AGENT 2: Pragmatic Analyzer  ->  Speech Acts + Implicature Tags
+|
+AGENT 3: Semantic & Register Detector  ->  Drift Map + Register Tags
+|
+AGENT 4: Corpus Statistician  ->  Frequency + Collocation Data
+|
+AGENT 5 (ORCHESTRATOR): Evidence Synthesizer  ->  Full Linguistic Report
+|
+[ FINAL OUTPUT: Dashboard + Report + JSON Download ]
+TABLE END
+TABLE START
+AGENT
+01 | Corpus Preprocessor & Segmenter
+Prepares raw text for linguistic analysis
+Linguistic Approach | Corpus Linguistics Pre-processing: tokenization, sentence boundary detection, normalization (Sinclair's corpus methodology)
+Key Tasks | Read uploaded file (.txt, .csv, .json, PDF) and detect encoding
+Remove noise: HTML tags, special characters, irrelevant metadata
+Segment corpus into sentences and paragraphs using NLTK or spaCy
+Tag each segment with metadata: position, length, word count
+Produce a clean, structured JSON with segments array and corpus statistics
+Input -> Output | Raw uploaded file  ->  Structured JSON: [{id, text, position, word_count, sentences[]}]
+TABLE END
+TABLE START
+AGENT
+02 | Pragmatic Analyzer
+Extracts speech acts, implicatures, and politeness patterns
+Linguistic Approach | Pragmatics: Speech Act Theory (Austin 1962, Searle 1969), Gricean Maxims (1975), Politeness Theory (Brown & Levinson 1987)
+Key Tasks | For each segment, classify the dominant Speech Act (Searle taxonomy): Assertive, Directive, Commissive, Expressive, Declaration
+Identify violations of Grice's Maxims (Quantity, Quality, Relation, Manner) using GPT-4o prompting
+Detect conventional and conversational implicatures
+Score politeness level per segment using Brown and Levinson face-saving strategies
+Flag segments with pragmatic ambiguity or indirect speech acts
+Input -> Output | Structured segments  ->  Enriched JSON with speech_act, maxim_violations[], implicature_type, politeness_score
+TABLE END
+TABLE START
+AGENT
+03 | Semantic Field & Register Detector
+Maps vocabulary drift and identifies register shifts
+Linguistic Approach | Semantic Field Theory (Lyons 1977), Register Analysis (Halliday 1978 — Tenor, Field, Mode), Lexical Semantics
+Key Tasks | Extract content words (nouns, verbs, adjectives) from each corpus section
+Group words into semantic fields using GPT-4o clustering (CONFLICT, ECONOMY, TECHNOLOGY, EMOTION, etc.)
+Detect semantic drift: words appearing in unexpected semantic fields in later or different corpus sections
+Classify register for each segment: Formal, Semi-Formal, Informal, Technical, Colloquial
+Identify register borrowing: formal terms in informal contexts or vice versa
+Produce a Semantic Drift Map: {word: [{field, frequency, section}]}
+Input -> Output | Pragmatic-enriched JSON  ->  Semantic drift map + register classification per segment
+TABLE END
+TABLE START
+AGENT
+04 | Corpus Statistician
+Performs quantitative corpus linguistic analysis
+Linguistic Approach | Corpus Linguistics: Frequency Analysis, Collocation (Sinclair 1991), Keyness (Scott 1997), MI Score, Type-Token Ratio
+Key Tasks | Compute word frequency lists for each corpus section and time period
+Identify collocates for target keywords (words within +/- 5 word window)
+Calculate Mutual Information (MI) scores for significant collocations
+Perform keyness analysis: which words are statistically more frequent in one section vs another
+Detect n-gram patterns and fixed expressions (formulaic language)
+Generate frequency drift data: how top-20 content words change across corpus sections
+Input -> Output | Annotated corpus  ->  Statistical tables: frequencies, collocations, keyness scores, TTR per section
+TABLE END
+TABLE START
+AGENT
+05 | Orchestrator & Evidence Synthesizer
+Synthesizes all evidence into a structured linguistic report
+Linguistic Approach | Critical Discourse Analysis (Fairclough 1992), Evidence-Based Linguistic Reporting, Synthesis across all frameworks
+Key Tasks | Receive outputs from Agents 1-4 and evaluate coverage and consistency
+If any agent's output is sparse or contradictory, send a targeted re-analysis request to that agent
+Generate structured linguistic report: Executive Summary, Pragmatic Drift Evidence, Semantic Field Shifts, Register Analysis, Corpus Statistics, Conclusions
+For each finding, cite specific corpus examples with segment IDs as linguistic evidence
+Produce an overall Meaning Drift Score (0-100) with sub-scores for pragmatic, semantic, and register drift
+Format final output as: human-readable report + structured JSON + summary dashboard data
+Input -> Output | All agent outputs  ->  Full report (text) + structured evidence JSON + dashboard metrics
+TABLE END
+TABLE START
+Item | Details and Source
+OpenAI API Key (GPT-4o) | ALREADY HAVE — Used for all agent reasoning. GPT-4o is recommended for linguistic analysis quality.
+Antigravity IDE (Google) | FREE — Your primary development environment.
+Python 3.10+ | FREE — Core programming language for all agents.
+openai (Python library) | FREE — pip install openai. Required to call GPT-4o from Python.
+spaCy or NLTK | FREE — pip install spacy nltk. Used by Agent 1 for tokenization and segmentation.
+pandas | FREE — pip install pandas. Used by Agent 4 for frequency tables and statistical analysis.
+collections / Counter | FREE — Python standard library. Used for word frequency counting.
+json (standard library) | FREE — For storing and passing structured data between agents.
+gradio | FREE — pip install gradio. For building the interactive app interface in the browser.
+A text corpus | FREE — Project Gutenberg, political speech archives, news datasets, or class texts.
+TABLE END
+TABLE START
+pmdd_project/
+|- app.py                   # Main Gradio app entry point
+|- agents/
+|  |- agent1_preprocessor.py
+|  |- agent2_pragmatic.py
+|  |- agent3_semantic.py
+|  |- agent4_statistics.py
+|  |- agent5_orchestrator.py
+|- utils/
+|  |- helpers.py            # Shared utility functions
+|- outputs/reports/         # Generated reports saved here
+|- requirements.txt
+TABLE END
+TABLE START
+# agents/agent1_preprocessor.py
+import spacy, json, re
+nlp = spacy.load('en_core_web_sm')
+
+def run_agent1(file_path: str) -> dict:
+with open(file_path, 'r', encoding='utf-8') as f:
+raw_text = f.read()
+text = re.sub(r'\s+', ' ', raw_text).strip()
+doc = nlp(text)
+segments = []
+for i, sent in enumerate(doc.sents):
+segments.append({
+'id': i,
+'text': sent.text.strip(),
+'word_count': len([t for t in sent if not t.is_space]),
+'position': round(i / len(list(doc.sents)), 2)
+})
+return {
+'corpus_stats': {'total_sentences': len(segments),
+'total_words': sum(s['word_count'] for s in segments)},
+'segments': segments
+}
+TABLE END
+TABLE START
+# agents/agent2_pragmatic.py
+from openai import OpenAI
+client = OpenAI(api_key='YOUR_OPENAI_API_KEY')
+
+SYSTEM_PROMPT = '''You are a computational linguistics expert.
+Analyze the given text segment using these exact frameworks:
+1. Speech Act Theory (Searle): classify as one of:
+Assertive / Directive / Commissive / Expressive / Declaration
+2. Gricean Maxims: list any violations:
+Quantity (too much/too little info) / Quality (unverifiable claim) /
+Relation (irrelevant) / Manner (unclear/ambiguous)
+3. Implicature: identify as conventional or conversational
+4. Politeness: score 1-5 (1=very face-threatening, 5=highly polite)
+Return ONLY valid JSON with keys:
+{speech_act, maxim_violations[], implicature, politeness_score}'''
+
+def analyze_segment(segment_text: str) -> dict:
+response = client.chat.completions.create(
+model='gpt-4o',
+messages=[{'role':'system','content':SYSTEM_PROMPT},
+{'role':'user','content':f'Analyze: {segment_text}'}],
+temperature=0.2
+)
+import json
+return json.loads(response.choices[0].message.content)
+
+def run_agent2(segments: list) -> list:
+results = []
+for seg in segments:
+analysis = analyze_segment(seg['text'])
+results.append({**seg, **analysis})
+return results
+TABLE END
+TABLE START
+# agents/agent5_orchestrator.py
+def run_orchestrator(a1_out, a2_out, a3_out, a4_out, client):
+# Quality check: if < 50% segments have speech act labels, re-run Agent 2
+labeled = sum(1 for s in a2_out if s.get('speech_act'))
+if labeled / len(a2_out) < 0.5:
+print('Agent 2 coverage low — requesting re-analysis...')
+from agents.agent2_pragmatic import run_agent2
+a2_out = run_agent2(a1_out['segments'])
+
+synthesis_prompt = f'''
+You are a senior computational linguist. Synthesize these findings:
+- Corpus stats: {a1_out['corpus_stats']}
+- Pragmatic sample: {a2_out[:5]}
+- Semantic drift: {a3_out}
+- Corpus statistics: {a4_out}
+
+Write a formal linguistic evidence report with these sections:
+1. Executive Summary (2 paragraphs)
+2. Pragmatic Drift Evidence (cite segment IDs)
+3. Semantic Field Shifts (cite specific vocabulary)
+4. Register Analysis Findings
+5. Corpus Statistics Summary
+6. Overall Meaning Drift Score (0-100) with justification
+'''
+response = client.chat.completions.create(
+model='gpt-4o',
+messages=[{'role':'user','content':synthesis_prompt}],
+max_tokens=2000
+)
+return response.choices[0].message.content
+TABLE END
+TABLE START
+# app.py
+import gradio as gr
+from openai import OpenAI
+from agents.agent1_preprocessor  import run_agent1
+from agents.agent2_pragmatic     import run_agent2
+from agents.agent3_semantic      import run_agent3
+from agents.agent4_statistics    import run_agent4
+from agents.agent5_orchestrator  import run_orchestrator
+
+client = OpenAI(api_key='YOUR_OPENAI_API_KEY')
+
+def analyze_corpus(file_obj, target_keywords):
+keywords = [k.strip() for k in target_keywords.split(',')]
+log = []
+log.append('Running Agent 1: Preprocessing...')
+a1 = run_agent1(file_obj.name)
+log.append(f'Agent 1 complete. Segments: {len(a1["segments"])}')
+a2 = run_agent2(a1['segments'])
+log.append('Agent 2 complete: Pragmatic analysis done.')
+a3 = run_agent3(a1['segments'], keywords, client)
+log.append('Agent 3 complete: Semantic drift detected.')
+a4 = run_agent4(a1['segments'])
+log.append('Agent 4 complete: Corpus statistics ready.')
+report = run_orchestrator(a1, a2, a3, a4, client)
+log.append('Agent 5 complete. Report generated!')
+return '\n'.join(log), report
+
+demo = gr.Interface(
+fn=analyze_corpus,
+inputs=[
+gr.File(label='Upload Corpus (.txt or .csv)'),
+gr.Textbox(label='Target Keywords (comma-separated)',
+value='community, power, change')
+],
+outputs=[
+gr.Textbox(label='Agent Progress Log'),
+gr.Textbox(label='Linguistic Report', lines=30)
+],
+title='PMDD — Pragmatic Meaning Drift Detector',
+description='Upload a text corpus and receive a full linguistic analysis report.'
+)
+demo.launch()
+TABLE END
+TABLE START
+Corpus Type | Source and Linguistic Value
+Political Speeches | UCSB American Presidency Project — ideal for pragmatic drift analysis across time periods
+Academic Abstracts | ACL Anthology abstracts 2000-2024 — register and semantic field shifts in NLP research
+News Articles | BBC News archives or Guardian API — cross-genre and temporal analysis
+Literary Texts | Project Gutenberg — Victorian vs Modern English register analysis
+Social Media Text | Reddit datasets (PushShift) — informal register and Gricean maxim violation patterns
+TABLE END
+TABLE START
+Sample Output — Political Speech Corpus (847 segments)
+EXECUTIVE SUMMARY
+Analysis of 847 corpus segments reveals statistically significant pragmatic drift across the
+two time periods examined. The frequency of Directive speech acts increased from 18.3%
+(2000-2010) to 31.7% (2015-2024), indicating a shift toward more mobilizing discourse.
+
+PRAGMATIC DRIFT EVIDENCE
+Gricean Maxim of Quantity violations increased by 22% in Period 2. Conventional implicatures
+associated with 'community' shifted from SOLIDARITY domain to EXCLUSION domain — a pragmatic
+semantic drift confirmed by collocation analysis (Agent 4). See Segments #203, #445, #612.
+
+OVERALL MEANING DRIFT SCORE: 74/100 (High Drift Detected)
+Pragmatic Drift: 81/100   |   Semantic Drift: 68/100   |   Register Drift: 73/100
+TABLE END
+TABLE START
+Criterion | What We Look For | Weight
+Linguistic Theory Accuracy | Correct application of Speech Act, Gricean, and Semantic Field frameworks | 25%
+Agent Design (Modularity) | Each agent has a clear, single linguistic responsibility | 20%
+Evidence Quality | Final report cites specific corpus segments as linguistic evidence | 25%
+Technical Implementation | Code runs correctly on Antigravity IDE, handles file uploads | 15%
+Corpus Analysis Depth | Results reflect genuine patterns in the corpus data, not hallucinated | 15%
+TABLE END

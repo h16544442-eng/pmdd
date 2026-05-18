@@ -1,0 +1,32 @@
+{
+  "installCommand": "python -m pip install -r requirements.txt && cd frontend && npm install",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/config/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/session/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/agent/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/download/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "hosting": {
+    "public": "frontend/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/config/**",
+        "run": {
+          "serviceId": "pmdd-api",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/session/**",
+        "run": {
+          "serviceId": "pmdd-api",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/agent/**",
+        "run": {
+          "serviceId": "pmdd-api",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "/download/**",
+        "run": {
+          "serviceId": "pmdd-api",
+          "region": "us-central1"
+        }
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

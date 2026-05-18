@@ -1,0 +1,131 @@
+COMPUTATIONAL LINGUISTICS
+Agentic AI for Linguistic Analysis
+A Complete Lecture & Project Guide
+
+
+Building on Previous Work: AI vs Human Writing Analysis (4-Agent System)
+
+Table of Contents
+1.  What is Agentic AI?	3
+2.  How AI Agents Work — Core Architecture	4
+3.  From Your 4-Agent System to the Next Level	5
+4.  The New Project: Pragmatic Meaning Drift Detector (PMDD)	6
+5.  Linguistic Theoretical Framework	7
+6.  Proposed Agentic Workflow	8
+7.  The Five Agents — Detailed Design	9
+8.  Items and Tools Required	14
+9.  Implementation Guide on Antigravity IDE	15
+10.  Sample Corpus and Expected Outputs	18
+11.  Evaluation Criteria (Linguistics-Based)	19
+12.  Student Assignment Checklist	20
+
+1. What is Agentic AI?
+Agentic AI refers to artificial intelligence systems that can act autonomously toward a goal — planning, executing actions, using tools, and adapting based on feedback — without requiring step-by-step human instructions. Unlike a standard chatbot that responds to a single prompt and stops, an AI Agent can reason across multiple steps, call external tools, remember intermediate results, and coordinate with other agents to solve complex tasks.
+
+
+1.1  The Four Pillars of an AI Agent
+
+1.2  Why Agentic AI Matters for Linguistics
+Traditional NLP pipelines are rigid: each step is hardcoded. Agentic systems are adaptive and modular: each agent can re-evaluate its strategy, handle exceptions, and pass enriched data downstream — exactly what large-scale linguistic corpus analysis demands.
+Handles diverse file formats: .txt, .csv, .json, PDF corpora
+Applies multiple linguistic frameworks simultaneously across layers
+Produces structured, evidence-based linguistic reports automatically
+Scales from a single essay to a million-token corpus
+
+2. How AI Agents Work — Core Architecture
+Every AI agent follows the Observe -> Think -> Act -> Reflect cycle. Understanding this loop is essential before designing any multi-agent linguistics system.
+
+
+2.1  Types of Agent Memory
+
+2.2  Agent Communication Patterns
+Sequential (Pipeline): Agent 1 -> Agent 2 -> Agent 3 -> Final Output. Each agent hands its result to the next. Simple and predictable.
+Hierarchical (Orchestrator + Sub-agents): A master agent delegates tasks to specialist sub-agents and synthesizes their results.
+Parallel (Swarm): Multiple agents work simultaneously on different parts of the data, and their outputs are merged.
+
+In our PMDD project, we use a hybrid pattern: sequential pipeline at the macro level (agents 1 to 5) with an orchestrator (Agent 5) that can request re-analysis from any earlier agent if evidence is insufficient.
+
+3. From Your 4-Agent System to the Next Level
+Your previous project built a 4-layer system analyzing AI-generated vs human-written text using distinct linguistic approaches per agent. Here is how the new project compares and extends that work:
+
+
+4. The New Project: Pragmatic Meaning Drift Detector (PMDD)
+
+4.1  What Does PMDD Analyze?
+PMDD investigates how the pragmatic meaning, connotative associations, and discourse functions of key lexical items shift across different time periods, genres, or social groups within a text corpus. This is a core question in Historical Pragmatics, Sociolinguistics, and Corpus Linguistics.
+
+Examples of research questions PMDD can answer from a large corpus:
+How has the word "community" shifted in its pragmatic use across political speeches from 2000 to 2024?
+Do academic research papers in 2010 use hedging language differently from those in 2024?
+How do informal social media texts differ from formal news texts in their use of causal connectives?
+Is there evidence of register borrowing — formal vocabulary appearing in informal contexts?
+How do politeness strategies evolve across different sections of a legal document corpus?
+
+4.2  Why This Topic is Novel and Linguistically Important
+
+5. Linguistic Theoretical Framework
+Each agent in PMDD is grounded in an established linguistic theory. Students must understand these frameworks before writing any code.
+
+
+6. Proposed Agentic Workflow
+
+6.1  Data Flow Diagram
+
+7. The Five Agents — Detailed Design
+Each agent card below shows its linguistic approach, key tasks, and data input/output format.
+
+
+
+
+
+
+8. Items and Tools Required
+Everything needed is either free or already available to you. The only paid component is your existing OpenAI API key.
+
+
+9. Implementation Guide on Antigravity IDE
+9.1  Project Structure
+
+9.2  Agent 1: Corpus Preprocessor
+
+9.3  Agent 2: Pragmatic Analyzer — System Prompt Design
+The system prompt is the core linguistic instrument for Agent 2. Careful prompt engineering is required:
+
+
+9.4  Agent 5: Orchestrator Logic
+
+9.5  App Interface with Gradio
+
+10. Sample Corpus and Expected Outputs
+10.1  Suggested Starter Corpora (All Free)
+
+10.2  Sample Agent 5 Report Fragment
+
+11. Evaluation Criteria (Linguistics-Based)
+
+
+12. Student Assignment Checklist
+Phase 1: Setup and Understanding
+Read all six theoretical framework entries in Section 5 of this document
+Set up your Antigravity IDE project with the folder structure from Section 9.1
+Install all required packages: openai, spacy, pandas, gradio
+Test your OpenAI API key with a simple Python script before proceeding
+
+Phase 2: Agent Development
+Implement Agent 1 (Preprocessor) and test it with a sample .txt file
+Design the system prompt for Agent 2 using Speech Act and Gricean frameworks
+Implement Agent 2 and verify it returns valid JSON with required fields
+Implement Agent 3 and verify semantic field clustering makes linguistic sense
+Implement Agent 4 and produce frequency tables, check against a manual count
+Implement Agent 5 and test the feedback loop with a small corpus first
+
+Phase 3: Integration and Application
+Connect all five agents in app.py following the workflow in Section 6
+Build the Gradio UI with file upload and keyword input fields
+Test with a real corpus of at least 500 sentences
+Verify final report contains specific corpus segment citations as evidence
+Prepare a 5-minute presentation: show the app running on a corpus of your choice
+
+
+Core Principle: Linguistics First, Technology Second
+The agents are tools. The linguistic evidence they produce must be interpretable, defensible, and grounded in the theoretical frameworks in Section 5. A technically perfect system that produces linguistically invalid findings has failed.

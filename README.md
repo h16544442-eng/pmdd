@@ -1,31 +1,16 @@
-# PMDD: Pragmatic Meaning Drift Detector
+# React + Vite
 
-A state-of-the-art agentic AI framework for scientific linguistic analysis, featuring a high-end "Digital Atelier" dashboard.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Overview
-PMDD uses a 5-agent pipeline to autonomously analyze large linguistic corpora, detecting subtle shifts in pragmatic meaning and semantic variance.
+Currently, two official plugins are available:
 
-### The 5-Agent Pipeline:
-1.  **Preprocessor**: Segments and cleans input data.
-2.  **Pragmatic Analyzer**: Conducts deep reflective analysis of meaning drift.
-3.  **Semantic Detector**: Identifies register shifts and semantic anomalies.
-4.  **Statistical Analyst**: Quantifies variance and provides data evidence.
-5.  **Orchestrator**: Synthesizes all findings into a professional scientific PDF report.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🎨 Design System: "Digital Atelier"
-The application has been professionalized with a premium design system:
-- **Aesthetic**: Dark-mode Glassmorphism.
-- **Color Palette**: Deep Obsidian background (#0b1326) with Indigo energy signatures (#6366f1).
-- **Typography**: 
-    - **Inter**: For clean, authoritative headings and body text.
-    - **JetBrains Mono**: For technical data readouts and agent logs.
-- **Components**: Frosted glass panels, vibrant glows on active states, and a real-time technical pipeline monitor.
+## React Compiler
 
-## 🛠️ Getting Started
-1.  **Configure API**: Update `.env` with your `OPENAI_API_KEY`.
-2.  **Install Dependencies**: `pip install -r requirements.txt`
-3.  **Launch App**: `python app.py`
-4.  **Access Dashboard**: Open `http://127.0.0.1:7860` in your browser.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📄 Output
-The system generates research-grade linguistic reports in PDF format, containing both qualitative analysis and quantitative statistical evidence.
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
